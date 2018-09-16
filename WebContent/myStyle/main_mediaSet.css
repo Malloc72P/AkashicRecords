@@ -1,0 +1,116 @@
+@media only screen and ( min-width : 0px ){
+	/************************************
+	 * 0px---> POST-STYLE
+	************************************/
+	.post-body{
+	    margin: 30px 20px 30px 20px;
+	}
+	.post-img-area{
+		overflow:hidden;
+	}
+	.post-img{
+	}
+	/************************************
+	 * 0px---> POST-STYLE-textarea
+	************************************/
+	.post-header{
+		font-weight: bold;
+	}
+	.post-header > P::first-letter{
+		font-size: 150%;
+	}
+	/************************************
+	 * 0px---> POST-STYLE-imgArea
+	************************************/
+	.post-img{
+		width: 83%;
+	}
+	.post-img{
+		margin: 0 auto;
+		width : 460px;
+		height: 230px;
+	}
+	/************************************
+	 * 0px---> MAIN-CONTENT
+	************************************/
+	.post-footer-text{
+	    top: 0px;
+	}
+	/************************************
+	 * 0px---> SIDEBAR
+	************************************/
+	.main-sidebar{
+		width: 45%;
+		z-index: 100;
+	}
+	/************************************
+	************************************/
+}
+@media only screen and ( min-width : 769px ){
+	/************************************
+	 * 769px---> POST-STYLE
+	************************************/
+	.post-body{
+	    margin: 30px 20px 30px 20px;
+	}
+	.post-content::after{
+		clear:both;
+		display : block;
+		content: '';
+	}
+	/************************************
+	 * 769px---> POST-STYLE-textarea
+	************************************/
+	.post-header{
+		font-weight: bold;
+	}
+	.post-text-area{
+		width: 527px;
+		float: left;
+	}
+	.post-header > P::first-letter{
+		font-size: 150%;
+	}
+	/************************************
+	 * 769px---> POST-STYLE-imgarea
+	************************************/
+	.post-img-area{
+		float: right;
+	}
+	.post-img{
+		width : 167px;
+		height: 167px;
+	}
+	/************************************
+	 * 769px---> MAIN-CONTENT
+	************************************/
+	.cl_div_mainContent{
+		width: 100%;
+	}
+	.post-footer-text{
+	    top: -25px;
+	}
+	/************************************
+	 * 769px---> SIDEBAR
+	************************************/
+	.main-sidebar{
+		width: 20%;
+	}
+	/************************************
+	************************************/
+}
+@media only screen and ( min-width : 1024px ){
+		
+	.cl_div_mainContent{
+		width: 1024px;
+		margin: 0 auto;
+	}
+	.banner-img{
+		height: 388px;
+	}
+	/************************************
+	************************************/
+}
+/*******************************************************************
+ ********************************EOF********************************
+********************************************************************/

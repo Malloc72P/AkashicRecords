@@ -1,0 +1,124 @@
+/************************************
+ * 메인페이지 네비바(최상단 타이틀 포함)
+************************************/
+.main-navibar{
+	top: 0px;
+	border-bottom : 1px solid #cbcbcb;
+	z-index: 50;
+}
+/************************************
+ * 메인페이지 메인컨텐츠-최상위래퍼
+************************************/
+.cl_div_mainContent{
+	position: relative;
+	overflow: hidden;
+}
+/************************************
+ * ___메인컨텐츠-배너
+************************************/
+.banner-img{
+	position : relative;
+	background-image: url("../img/akashic.jpg");
+	height: 341px;
+}
+.profile-img{
+	position: absolute;
+	background: white;
+	background-image: url("../img/profile_default.png");
+	/* filter: invert(100%); */
+	color: white;
+	left: 50%;
+	top: 50%;
+	width: 128px;
+	height: 128px;
+	margin-top: -128px;
+	margin-left: -64px;
+	border: 5px solid white;
+	border-radius: 50%;
+	
+}
+.profile-name{
+	top: 128px;
+	text-align: center;
+	font-weight: bold;
+	position: relative;
+}
+/************************************
+ * ___메인컨텐츠-포스트-리스트
+************************************/
+.main-section{
+	max-width: 700px;
+	margin: 0 auto;	
+}
+/************************************
+ * ___메인컨텐츠-FUNCTION-SELECTOR
+************************************/
+.func-list{
+    border-bottom: 1px solid #eae6e6;
+    border-right: 1px solid #eae6e6;
+    border-left: 1px solid #eae6e6;
+    box-shadow: 0px 22px 41px 7px rgba(0,0,0,0.07);
+    margin-bottom: 70px;
+}
+
+
+/************************************
+ * ___메인컨텐츠-컨텐츠스타일
+************************************/
+.post-wrapper{
+	position: relative;
+	margin-right: 0px;
+	padding-right: 0px;
+	margin-left: 0px;
+	padding-left: 0px;
+}
+
+.post-img{
+	background-image: url("../img/akashic_small2.png");
+}
+.post-title{
+	margin: 0px 0px 20px 0px;
+	padding: 0px;
+	line-height: 20px;
+	max-height: 30px;
+	font-size: 13px;
+	overflow: hidden;
+}
+.post-text{
+	margin: 0px 0px 20px 0px;
+	padding: 0px;
+	line-height: 20px;
+	max-height: 60px;
+	font-size: 13px;
+	overflow: hidden;
+}
+	.post-footer-wrapper{
+	}
+	.post-footer-text{
+	 font-size: 10px;
+	    position: absolute;
+	    color: #cbcbcb;
+	}
+	.post-footer-date{
+	    width: 200px;
+	    left: 15px;
+	}
+	.post-footer-view{
+	    width: 85px;
+	    left: 140px;
+	}
+/************************************
+ * 메인페이지 사이드바
+************************************/
+.c_sidebar_toggle_key{
+	position: fixed;
+	right: 0;
+	z-index: 499;
+}
+.main-sidebar{
+	top: 0px;
+	z-index: 500;
+}
+/*******************************************************************
+ ********************************EOF********************************
+********************************************************************/
