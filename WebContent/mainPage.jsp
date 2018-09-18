@@ -103,7 +103,7 @@
 	<!-- 아카식 네비바-->
 		<div class="main-navibar w3-bar <%=MainConst.THEME_COLOR_MAIN%>"><!-- 상단바 -->
 			<a href="#" class="w3-bar-item" style="text-decoration: none;">
-				<h3>Akashic Records Mk.15</h3>
+				<h3>Akashic Records Mk.16</h3>
 			</a>
 			
 			<div class="chk-side-on m_mgr_account">
@@ -137,7 +137,7 @@
 		
 		<!-- 아카식 배너 이미지 -->
 		<div class="imgRanderer banner-img w3-sepia">
-			<div class="profile-img imgRanderer w3-normal">
+			<div class="profile-img imgRanderer w3-normal" style="display:none;">
 				<h4 class="profile-name">Guest</h4>
 			</div>
 		</div>
