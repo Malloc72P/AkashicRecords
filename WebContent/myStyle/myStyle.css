@@ -4,6 +4,7 @@
 .main-navibar{
 	top: 0px;
 	border-bottom : 1px solid #cbcbcb;
+	box-shadow: 0px 5px 6px -5px rgba(0,0,0,0.5);
 	z-index: 50;
 }
 /************************************
@@ -18,7 +19,7 @@
 ************************************/
 .banner-img{
 	position : relative;
-	background-image: url("../img/akashic.jpg");
+/* 	background-image: url("../img/warmind2.jpg"); */
 	height: 341px;
 }
 .profile-img{
