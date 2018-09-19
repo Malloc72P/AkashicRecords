@@ -17,6 +17,7 @@
 	<link rel="stylesheet" href="myStyle/css_preset.css">
 	<link rel="stylesheet" href="myStyle/subSection.css">
 	<link rel="stylesheet" href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
@@ -26,6 +27,9 @@
   	<script src="<%=MainConst.PROJECT_NAME%>/js/animeBinder.js"></script>
 	<StylE>
 		/*--| ***CSS-StylesheeT StarT*** |--*/
+		*{
+			font-family: 'Source Sans Pro', sans-serif;
+		}
 		body{
 			background: white;
 			display: none;
@@ -33,7 +37,6 @@
 		/*--| ###CSS-StylesheeT EnD### |--*/
 		
 	</StylE>
-
 	<ScripT>
 		/*--| ***JavascripT StarT*** |--*/
 		$(document).ready(function(){
