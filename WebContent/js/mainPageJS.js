@@ -100,7 +100,7 @@ function bind_Select_Function(id_div_funcList , id_div_subSection , id_tempData_
 				//기능이 바뀌었으니, SUB-SECTION을 전부 지운다
 				$("#"+id_div_subSection).empty()
 				
-				console.log("mainPage.js.bind_Select_Function >>> profile 보기 기능 선택됨")
+				console.log("mainPage.js.bind_Select_Function >>> 프로필 보기 기능 선택됨")
 				getProfilePage(id_div_subSection)
 			}
 			if($(this).attr("id") == "sel-2"){//this는 클릭된 functionSelector이다
@@ -108,13 +108,13 @@ function bind_Select_Function(id_div_funcList , id_div_subSection , id_tempData_
 				$("#"+id_div_subSection).empty()
 				//만약 최신포스트 셀렉터가 눌렸다면......
 				
-				console.log("mainPage.js.bind_Select_Function >>> recentPost 보기 기능 선택됨")
+				console.log("mainPage.js.bind_Select_Function >>> 최신포스트 보기 기능 선택됨")
 				getRecentPosts(id_div_subSection ,id_tempData_in_pageNum)
 				
 			}
 			if($(this).attr("id") == "sel-3"){//this는 클릭된 functionSelector이다
 				//기능이 바뀌었으니, SUB-SECTION을 전부 지운다
-				console.log("mainPage.js.bind_Select_Function >>> postList 보기 기능 선택됨")
+				console.log("mainPage.js.bind_Select_Function >>> 시리즈 보기 기능 선택됨")
 				$("#"+id_div_subSection).empty()
 				
 				getpostListPage(id_div_subSection)
@@ -122,17 +122,17 @@ function bind_Select_Function(id_div_funcList , id_div_subSection , id_tempData_
 			}
 			if($(this).attr("id") == "sel-4"){//this는 클릭된 functionSelector이다
 				//기능이 바뀌었으니, SUB-SECTION을 전부 지운다
-				console.log("mainPage.js.bind_Select_Function >>> webTools 보기 기능 선택됨")
+				console.log("mainPage.js.bind_Select_Function >>> 방명록 보기 기능 선택됨")
 				$("#"+id_div_subSection).empty()
 				
-				getWebTools(id_div_subSection)
+				getGuestBook(id_div_subSection)
 			}
 			if($(this).attr("id") == "sel-5"){//this는 클릭된 functionSelector이다
 				//기능이 바뀌었으니, SUB-SECTION을 전부 지운다
-				console.log("mainPage.js.bind_Select_Function >>> preferences 보기 기능 선택됨")
+				console.log("mainPage.js.bind_Select_Function >>> 웹프로그램 보기 기능 선택됨")
 				$("#"+id_div_subSection).empty()
 				
-				getPreferences(id_div_subSection)
+				getWebTools(id_div_subSection)
 			}
 			
 			$(this).attr("href","#sel-selected")
@@ -333,25 +333,7 @@ function getpostListPage( id_div_subSection ){
 			}
 		)
 }
-function getWebTools( id_div_subSection ){
-	console.log("mainPage.js.getWebTools >>> 함수 호출됨")
-	$.ajax(
-			{ 
-				method : "post",
-				url    : AKASHIC.URL+AKASHIC.PROJECT+"/webTools.do",
-				cache  : false,
-				success: function(result){
-					var htmlRES = $.parseHTML( result )
-					$("#"+id_div_subSection).append(htmlRES)
-					//AJAX로 받아온 페이지엔 CURRENT_PAGE와 PAGECOUNT값을 가지고 있는 히든태그가 있고 다음과 같이 가져올 수 있다
-					//파싱된 HTML객체라서 다음과 같이 DOM을 이용해서 값을 찾을 수 있다.
-					
-					show_subSection("sel-4")
-				}
-			}
-		)
-}
-function getPreferences( id_div_subSection ){
+/*function getPreferences( id_div_subSection ){
 	console.log("mainPage.js.getPreferences >>> 함수 호출됨")
 	$.ajax(
 			{ 
@@ -368,8 +350,43 @@ function getPreferences( id_div_subSection ){
 				}
 			}
 		)
+}*/
+function getGuestBook( id_div_subSection ){
+	console.log("mainPage.js.GuestBook >>> 함수 호출됨")
+	$.ajax(
+			{ 
+				method : "post",
+				url    : AKASHIC.URL+AKASHIC.PROJECT+"/guestBook.do",
+				cache  : false,
+				success: function(result){
+					var htmlRES = $.parseHTML( result )
+					$("#"+id_div_subSection).append(htmlRES)
+					//AJAX로 받아온 페이지엔 CURRENT_PAGE와 PAGECOUNT값을 가지고 있는 히든태그가 있고 다음과 같이 가져올 수 있다
+					//파싱된 HTML객체라서 다음과 같이 DOM을 이용해서 값을 찾을 수 있다.
+					
+					show_subSection("sel-4")
+				}
+			}
+		)
 }
-
+function getWebTools( id_div_subSection ){
+	console.log("mainPage.js.getWebTools >>> 함수 호출됨")
+	$.ajax(
+			{ 
+				method : "post",
+				url    : AKASHIC.URL+AKASHIC.PROJECT+"/webTools.do",
+				cache  : false,
+				success: function(result){
+					var htmlRES = $.parseHTML( result )
+					$("#"+id_div_subSection).append(htmlRES)
+					//AJAX로 받아온 페이지엔 CURRENT_PAGE와 PAGECOUNT값을 가지고 있는 히든태그가 있고 다음과 같이 가져올 수 있다
+					//파싱된 HTML객체라서 다음과 같이 DOM을 이용해서 값을 찾을 수 있다.
+					
+					show_subSection("sel-5")
+				}
+			}
+		)
+}
 
 
 
