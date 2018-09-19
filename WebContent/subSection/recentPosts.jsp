@@ -20,7 +20,7 @@
 	<c:forEach var="article"  items="${articleList}">
 			<div class="post-wrapper w3-container post-body w3-pannel w3-leftbar <%=MainConst.THEME_COLOR_MAIN%>">
 				
-				<div class="post-content">
+				<div class="post-content custom-w3-card">
 					<div class="post-text-area">
 						<div class="post-header w3-xlarge">
 							<p class="w3-large post-title" style="padding: 5px 5px 5px 15px;">
@@ -32,7 +32,7 @@
 						<div class="post-summary w3-small w3-opacity">
 							<p class="w3-middle post-text" style="padding: 5px 5px 5px 15px;">
 								${ article.content }
-							</p>					
+							</p>				
 						</div>
 						<div class="post-footer-wrapper w3-display-bottomleft">
 							<p class="post-text post-footer-date post-footer-text">${ article.reg_date }</p>
