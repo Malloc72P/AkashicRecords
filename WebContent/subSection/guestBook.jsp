@@ -6,9 +6,9 @@
 <%@ page import="constSet.MainConst" %>
 
 <!--| ***body StarT*** |-->
-<div class="sel-5">
+<div class="sel-4">
 	<div style="width: 700px; height: 1024px;" class="w3-teal">
-				testing-Web-Tools
+				testing-GuestBook
 	</div>	
 </div>
 <!--| ###body EnD### |-->
