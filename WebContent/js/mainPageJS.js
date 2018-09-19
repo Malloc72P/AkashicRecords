@@ -79,12 +79,12 @@ function bind_Close_Panel(id_trigger, id_panel ,id_background){
 function bind_Select_Function(id_div_funcList , id_div_subSection , id_tempData_in_pageNum){
 				//".func-list" , "sub-section" , "id_tempData_pageNum"
 	effectOn_selectedFuncSelector( id_div_funcList )
-	alert(" bind_Select_Function ")
-	alert("bind_Select_Function>>> i will send this : "+$("#"+id_tempData_in_pageNum).val())
+	console.log(" bind_Select_Function ")
+	console.log("bind_Select_Function>>> i will send this : "+$("#"+id_tempData_in_pageNum).val())
 	getRecentPosts(id_div_subSection ,id_tempData_in_pageNum)
 	
 	$("#"+id_div_funcList).find("a[href^='#sel-']").each(function(){
-		alert("find a tag")
+		console.log("find a tag")
 		$(this).click(function(event){//this는 클릭된 functionSelector이다
 			
 			console.log("functionSelector clicked <<<")
@@ -100,7 +100,7 @@ function bind_Select_Function(id_div_funcList , id_div_subSection , id_tempData_
 				//기능이 바뀌었으니, SUB-SECTION을 전부 지운다
 				$("#"+id_div_subSection).empty()
 				
-				alert("mainPage.js.bind_Select_Function >>> profile 보기 기능 선택됨")
+				console.log("mainPage.js.bind_Select_Function >>> profile 보기 기능 선택됨")
 				getProfilePage(id_div_subSection)
 			}
 			if($(this).attr("id") == "sel-2"){//this는 클릭된 functionSelector이다
@@ -108,13 +108,13 @@ function bind_Select_Function(id_div_funcList , id_div_subSection , id_tempData_
 				$("#"+id_div_subSection).empty()
 				//만약 최신포스트 셀렉터가 눌렸다면......
 				
-				alert("mainPage.js.bind_Select_Function >>> recentPost 보기 기능 선택됨")
+				console.log("mainPage.js.bind_Select_Function >>> recentPost 보기 기능 선택됨")
 				getRecentPosts(id_div_subSection ,id_tempData_in_pageNum)
 				
 			}
 			if($(this).attr("id") == "sel-3"){//this는 클릭된 functionSelector이다
 				//기능이 바뀌었으니, SUB-SECTION을 전부 지운다
-				alert("mainPage.js.bind_Select_Function >>> postList 보기 기능 선택됨")
+				console.log("mainPage.js.bind_Select_Function >>> postList 보기 기능 선택됨")
 				$("#"+id_div_subSection).empty()
 				
 				getpostListPage(id_div_subSection)
@@ -122,14 +122,14 @@ function bind_Select_Function(id_div_funcList , id_div_subSection , id_tempData_
 			}
 			if($(this).attr("id") == "sel-4"){//this는 클릭된 functionSelector이다
 				//기능이 바뀌었으니, SUB-SECTION을 전부 지운다
-				alert("mainPage.js.bind_Select_Function >>> webTools 보기 기능 선택됨")
+				console.log("mainPage.js.bind_Select_Function >>> webTools 보기 기능 선택됨")
 				$("#"+id_div_subSection).empty()
 				
 				getWebTools(id_div_subSection)
 			}
 			if($(this).attr("id") == "sel-5"){//this는 클릭된 functionSelector이다
 				//기능이 바뀌었으니, SUB-SECTION을 전부 지운다
-				alert("mainPage.js.bind_Select_Function >>> preferences 보기 기능 선택됨")
+				console.log("mainPage.js.bind_Select_Function >>> preferences 보기 기능 선택됨")
 				$("#"+id_div_subSection).empty()
 				
 				getPreferences(id_div_subSection)
@@ -177,7 +177,7 @@ function  hide_subSection(tgt){
 function getRecentPosts(id_div_subSection , id_pageNum){
 	$("#"+id_pageNum).val("1")
 	var pageNum = $("#"+id_pageNum).val()
-	alert("getRecentPosts >>> "+pageNum)
+	console.log("getRecentPosts >>> "+pageNum)
 	$.ajax(
 		{ 
 			method : "post",
@@ -198,12 +198,12 @@ function getRecentPosts(id_div_subSection , id_pageNum){
 				var pageCount   = $(htmlRES).find("#id_pageCount").attr("value");
 				var postCount   = $(htmlRES).find("#id_postCount").attr("value");
 				
-				alert("id_currentPage >>> "+currentPage)
-				alert("id_pageCount >>> "  +pageCount  )
-				alert("id_postCount >>> "  +postCount  )
+				console.log("id_currentPage >>> "+currentPage)
+				console.log("id_pageCount >>> "  +pageCount  )
+				console.log("id_postCount >>> "  +postCount  )
 				//포스트리스트의 헤더를 그려준다
 				
-				var postHeader = '<div id="id_div_postListHeader" class="w3-bar w3-border" >';
+				var postHeader = '<div id="id_div_postListHeader" class="w3-card w3-bar w3-border" >';
 				   postHeader += '	<div class="w3-bar-item">';
 				   postHeader += '		<h5>'+postCount+' 포스트</h5>';
 				   postHeader += '	</div>';
@@ -220,8 +220,8 @@ function getRecentPosts(id_div_subSection , id_pageNum){
 				 * CASE3 : 있어어는 안되는 케이스로, 오류상황이다. 
 				 * */
 				if( currentPage < pageCount ){
-					alert("if( currentPage < pageCount )")
-					var strTemp = '<div id="id_post_nextPage" class="w3-middle w3-button" style="width: 100%; ">';
+					console.log("if( currentPage < pageCount )")
+					var strTemp = '<div id="id_post_nextPage" class="w3-card w3-middle w3-button" style="width: 100%; ">';
 					   strTemp += '<h4>다음페이지</h4>';
 					   strTemp += '</div>';
 					   $("#"+id_div_subSection).append(strTemp)
@@ -229,10 +229,10 @@ function getRecentPosts(id_div_subSection , id_pageNum){
 					   bind_appendPost("id_post_nextPage", id_div_subSection , id_pageNum)
 				}
 				else if( currentPage == pageCount ){
-					alert("else if( currentPage == pageCount )")
+					console.log("else if( currentPage == pageCount )")
 				}
 				else{
-					alert("else")
+					console.log("else")
 					console.log("포스트를 가져오는 과정에서 에러가 발생했습니다.")
 				}
 				
@@ -242,11 +242,11 @@ function getRecentPosts(id_div_subSection , id_pageNum){
 	)
 }//function submitAjax
 function append_morePosts(id_div_subSection , id_pageNum){
-	alert("append_morePosts >>> id_pageNum : "+id_pageNum)
+	console.log("append_morePosts >>> id_pageNum : "+id_pageNum)
 	 var pageNum = parseInt( $("#"+id_pageNum).attr("value") )
 	 pageNum = pageNum + 1
 	 $("#"+id_pageNum).attr("value" , pageNum )
-	 alert("append_morePosts >>> pageNum : "+$("#"+id_pageNum).attr("value"))
+	 console.log("append_morePosts >>> pageNum : "+$("#"+id_pageNum).attr("value"))
 	$.ajax(
 			{ 
 				method : "post",
@@ -263,8 +263,8 @@ function append_morePosts(id_div_subSection , id_pageNum){
 					var currentPage = $(htmlRES).find("#id_currentPage").attr("value");
 					var pageCount   = $(htmlRES).find("#id_pageCount").attr("value");
 					
-					alert("id_currentPage >>> "+currentPage)
-					alert("id_pageCount >>> "  +pageCount  )
+					console.log("id_currentPage >>> "+currentPage)
+					console.log("id_pageCount >>> "  +pageCount  )
 					
 					/*
 					 * CASE1 : 만약 현재페이지가 전체 페이지수보다 작다면, 다음 페이지가 있다는 뜻이다.
@@ -274,23 +274,23 @@ function append_morePosts(id_div_subSection , id_pageNum){
 					 * CASE3 : 있어어는 안되는 케이스로, 오류상황이다. 
 					 * */
 					if( currentPage < pageCount ){
-						alert("if( currentPage < pageCount )")
+						console.log("if( currentPage < pageCount )")
 						$("#id_post_nextPage").appendTo( $("#"+id_div_subSection) )
 					  
 					}
 					else if( currentPage == pageCount ){
-						alert("else if( currentPage == pageCount )")
+						console.log("else if( currentPage == pageCount )")
 						//더이상 추가페이지가 없으므로 버튼을 숨긴다
 						$("#id_post_nextPage").hide()
 					}
 					else{
-						alert("else")
+						console.log("else")
 						console.log("포스트를 가져오는 과정에서 에러가 발생했습니다.")
 					}
 					
 					
 					
-					alert("hidden tag : "+$("#id_tempData_pageNum").attr("value"))
+					console.log("hidden tag : "+$("#id_tempData_pageNum").attr("value"))
 					show_subSection("sel-2")
 				}
 			}
@@ -298,7 +298,7 @@ function append_morePosts(id_div_subSection , id_pageNum){
 }
 
 function getProfilePage( id_div_subSection ){
-	alert("mainPage.js.getProfilePage >>> 함수 호출됨")
+	console.log("mainPage.js.getProfilePage >>> 함수 호출됨")
 	$.ajax(
 			{ 
 				method : "post",
@@ -316,7 +316,7 @@ function getProfilePage( id_div_subSection ){
 		)
 }
 function getpostListPage( id_div_subSection ){
-	alert("mainPage.js.getpostListPage >>> 함수 호출됨")
+	console.log("mainPage.js.getpostListPage >>> 함수 호출됨")
 	$.ajax(
 			{ 
 				method : "post",
@@ -334,7 +334,7 @@ function getpostListPage( id_div_subSection ){
 		)
 }
 function getWebTools( id_div_subSection ){
-	alert("mainPage.js.getWebTools >>> 함수 호출됨")
+	console.log("mainPage.js.getWebTools >>> 함수 호출됨")
 	$.ajax(
 			{ 
 				method : "post",
@@ -352,7 +352,7 @@ function getWebTools( id_div_subSection ){
 		)
 }
 function getPreferences( id_div_subSection ){
-	alert("mainPage.js.getPreferences >>> 함수 호출됨")
+	console.log("mainPage.js.getPreferences >>> 함수 호출됨")
 	$.ajax(
 			{ 
 				method : "post",
