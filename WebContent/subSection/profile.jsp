@@ -28,21 +28,21 @@
 		    margin-top: -20px;
 			width : 80px;
 			height: 80px;
-			background-image: url("<%=MainConst.PROJECT_NAME%>//img/worker.png");
+			background-image: url(/AkashicRecords/img/worker.png);
 		}
 		.cl_div_discordImg{
 			float : right;
 		    margin-top: -20px;
 			width : 80px;
 			height: 80px;
-			background-image: url("<%=MainConst.PROJECT_NAME%>//img/discord.png");
+			background-image: url(/AkashicRecords/img/discord.png);
 		}
 		.cl_div_serverImg{
 			float : right;
 		    margin-top: -20px;
 			width : 80px;
 			height: 80px;
-			background-image: url("<%=MainConst.PROJECT_NAME%>//img/server.png");
+			background-image: url(/AkashicRecords/img/server.png);
 		}
 		
 	</style>
