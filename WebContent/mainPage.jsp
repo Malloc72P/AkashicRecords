@@ -114,7 +114,7 @@
 	<!-- 아카식 네비바-->
 		<div class="main-navibar w3-bar <%=MainConst.THEME_COLOR_MAIN%>"><!-- 상단바 -->
 			<a href="#" class="w3-bar-item" style="text-decoration: none;">
-				<h3>Akashic Records Mk.19</h3>
+				<h3>Akashic Records Mk.20</h3>
 			</a>
 			
 			<div class="chk-side-on m_mgr_account">
@@ -162,20 +162,17 @@
 		<!-- 아카식 FUNCTION-SELECTOR -->
 		<div id="id_div_funcList" class="func-list w3-card w3-border w3-bar">
 				<!-- func-element-1 -->
-				<a id="sel-1"  class="w3-bar-item w3-button func-element1 w3-mobile" href="#sel-1" style="width:20%;" ><h4>프로필</h4></a>
+				<a id="sel-1"  class="w3-bar-item w3-button func-element1 w3-mobile" href="#sel-1" style="width:25%;" ><h4>프로필</h4></a>
 				
 				<!-- func-element-2 -->
-				<a id="sel-2"  class="w3-bar-item w3-button func-element2 w3-mobile" href="#sel-selected" style="width:20%;" ><h4>최신포스트</h4></a>
+				<a id="sel-2"  class="w3-bar-item w3-button func-element2 w3-mobile" href="#sel-selected" style="width:25%;" ><h4>최신포스트</h4></a>
 				
 				<!-- func-element-3 -->
-				<a id="sel-3"  class="w3-bar-item w3-button func-element3 w3-mobile" href="#sel-3" style="width:20%;" ><h4>시리즈</h4></a>
+				<a id="sel-3"  class="w3-bar-item w3-button func-element3 w3-mobile" href="#sel-3" style="width:25%;" ><h4>시리즈</h4></a>
 				
 				<!-- func-element-4 -->
-				<a id="sel-4"  class="w3-bar-item w3-button func-element4 w3-mobile" href="#sel-4" style="width:20%;" ><h4>방명록</h4></a>
-				
-				<!-- func-element-5 -->
-				<a id="sel-5"  class="w3-bar-item w3-button func-element5 w3-mobile" href="#sel-5" style="width:20%;" ><h4>웹프로그램</h4></a>
-			
+				<a id="sel-4"  class="w3-bar-item w3-button func-element4 w3-mobile" href="#sel-4" style="width:25%;" ><h4>방명록</h4></a>
+							
 		</div>
 		<!-- 아카식 FUNCTION-SELECTOR -->
 		

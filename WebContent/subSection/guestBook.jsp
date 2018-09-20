@@ -140,17 +140,17 @@
 		}
 		
 		.modify-img{
-			
-		}		
-		.guestBookProfileName{
-			font-weight: 500;
-		}
-		.guestBook-text{
 			background-image: url(/AkashicRecords/img/profile_default.png);
 		    width: 12px;
 		    height: 12px;
 		    border-radius: 50%;
 		    border: 1px solid grey;
+		}		
+		.guestBookProfileName{
+			font-weight: 500;
+		}
+		.guestBook-text{
+			
 		}
 
 	</style>
