@@ -53,7 +53,7 @@
 	<div style="max-width: 700px; min-height: 480px;">
 		<div id="id_div_seriesListHeader" class="w3-card w3-bar" style="margin-bottom: 40px;" >
 			<div class="w3-bar-item">
-				<h5>18-09-20 목</h5>
+				<h5>${ profilePagedate }</h5>
 			</div>
 			<a class="w3-right w3-bar-item w3-button w3-mobile" id="id_a_writePost" href="#">
 				<h5>프로필 수정</h5>

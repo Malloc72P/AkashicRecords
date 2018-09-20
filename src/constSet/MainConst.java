@@ -1,5 +1,11 @@
 package constSet;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
+import com.sun.jmx.snmp.Timestamp;
+
 public class MainConst {
 	
 	//***PROJECT NAME
@@ -32,6 +38,14 @@ public class MainConst {
 		MainConst.SERVER_FILESYSTEM_PATH = server_Path;
 		MainConst.MAIN_DB_PROPERTY_ABSOLUTE_PATH = MainConst.SERVER_FILESYSTEM_PATH + MainConst.MAIN_DB_PROPERTY_PATH;
 		MainConst.MAIN_ACT_PROPERTY_ABSOLUTE_PATH = MainConst.SERVER_FILESYSTEM_PATH + MainConst.MAIN_ACT_PROPERTY_PATH;
+	}
+	public static String getFormatedDate() {
+		SimpleDateFormat sdf = new SimpleDateFormat("yy-MM-dd EEE");
+		Calendar calendar = Calendar.getInstance();
+		Date date = new Timestamp().getDate();
+		
+		System.out.println("MainConst.getFormatedDate >>> "+sdf.format(date));
+		return sdf.format(date);
 	}
 }
 
