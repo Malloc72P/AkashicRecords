@@ -114,7 +114,7 @@
 	<!-- 아카식 네비바-->
 		<div class="main-navibar w3-bar <%=MainConst.THEME_COLOR_MAIN%>"><!-- 상단바 -->
 			<a href="#" class="w3-bar-item" style="text-decoration: none;">
-				<h3>Akashic Records Mk.17</h3>
+				<h3>Akashic Records Mk.18</h3>
 			</a>
 			
 			<div class="chk-side-on m_mgr_account">
