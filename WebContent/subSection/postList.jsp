@@ -53,8 +53,8 @@
 </head>
 <!--| ***body StarT*** |-->
 	<div class="sel-3">
-	<div id="id_div_seriesListHeader" class="w3-card w3-bar w3-border" style="margin-bottom: 40px;" >
-	<div class="w3-bar-item">
+	<div id="id_div_seriesListHeader" class="w3-card w3-bar" style="margin-bottom: 40px;" >
+		<div class="w3-bar-item">
 			<h5>4 시리즈</h5>
 		</div>
 		<a class="w3-right w3-bar-item w3-button w3-mobile" id="id_a_writePost" href="#">

@@ -158,6 +158,7 @@ function getCurrSelectedFuncObj(id_div_funcList){
 }
 
 function show_subSection(tgt){
+	// 여기서 tgt 는
 	console.log("show_subSection >>> "+tgt)
 	$(".sub-section").find($("div"+"."+tgt)).addClass("fader")
 	$(".sub-section").find($("div"+"."+tgt)).show()
@@ -167,7 +168,6 @@ function  hide_subSection(tgt){
 	$(".sub-section").find($("div"+"."+tgt)).removeClass("fader")
 	$(".sub-section").find($("div"+"."+tgt)).hide()
 }
-
 
 /******************************************************************
  * AJAX-JQUERY FUNCTION
