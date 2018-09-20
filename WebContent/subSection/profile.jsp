@@ -49,7 +49,16 @@
 </head>
 <!--| ***body StarT*** |-->
 <div class="sel-1">
+	
 	<div style="max-width: 700px; min-height: 480px;">
+		<div id="id_div_seriesListHeader" class="w3-card w3-bar" style="margin-bottom: 40px;" >
+			<div class="w3-bar-item">
+				<h5>18-09-20 목</h5>
+			</div>
+			<a class="w3-right w3-bar-item w3-button w3-mobile" id="id_a_writePost" href="#">
+				<h5>프로필 수정</h5>
+			</a>
+		</div>
 		<div class="w3-leftbar cl_div_profileSection w3-white w3-card w3-container">
 			<div class="w3-container cl_div_profileHeader">
 				<p class="w3-medium">풀스택 개발자를 목표로 하는 잉여공대생 멀록입니다</p>

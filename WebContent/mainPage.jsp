@@ -114,7 +114,7 @@
 	<!-- 아카식 네비바-->
 		<div class="main-navibar w3-bar <%=MainConst.THEME_COLOR_MAIN%>"><!-- 상단바 -->
 			<a href="#" class="w3-bar-item" style="text-decoration: none;">
-				<h3>Akashic Records Mk.17</h3>
+				<h3>Akashic Records Mk.19</h3>
 			</a>
 			
 			<div class="chk-side-on m_mgr_account">
@@ -160,7 +160,7 @@
 		<div class="main-section">
 		
 		<!-- 아카식 FUNCTION-SELECTOR -->
-		<div id="id_div_funcList" class="func-list w3-bar">
+		<div id="id_div_funcList" class="func-list w3-card w3-border w3-bar">
 				<!-- func-element-1 -->
 				<a id="sel-1"  class="w3-bar-item w3-button func-element1 w3-mobile" href="#sel-1" style="width:20%;" ><h4>프로필</h4></a>
 				
