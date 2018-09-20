@@ -39,14 +39,6 @@ public class MainConst {
 		MainConst.MAIN_DB_PROPERTY_ABSOLUTE_PATH = MainConst.SERVER_FILESYSTEM_PATH + MainConst.MAIN_DB_PROPERTY_PATH;
 		MainConst.MAIN_ACT_PROPERTY_ABSOLUTE_PATH = MainConst.SERVER_FILESYSTEM_PATH + MainConst.MAIN_ACT_PROPERTY_PATH;
 	}
-	public static String getFormatedDate() {
-		SimpleDateFormat sdf = new SimpleDateFormat("yy-MM-dd EEE");
-		Calendar calendar = Calendar.getInstance();
-		Date date = new Timestamp().getDate();
-		
-		System.out.println("MainConst.getFormatedDate >>> "+sdf.format(date));
-		return sdf.format(date);
-	}
 }
 
 /*
